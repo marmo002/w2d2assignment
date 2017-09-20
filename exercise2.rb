@@ -12,6 +12,7 @@ def user_rating(documentaries, dramas, comedies)
   drama = "The Girl on The Train"
   comedy = "Horrible Bosses"
   dramady = "The 50 first days"
+  h = [documentaries, dramas, comedies].each_index.max
 
   if documentaries >= 4
     puts "You should watch \"#{documentary}\"."
@@ -22,7 +23,19 @@ def user_rating(documentaries, dramas, comedies)
   elsif (comedies >= 4) && (documentaries <= 3 && dramas <= 3)
     puts "You should watch \"#{comedy}\"."
   elsif (dramas <= 3 && comedies <= 3 && documentaries <= 3)
-    puts "mmm, I'm pretty sure you'r a lot into books."
+    puts "mmm, I'm pretty sure you're a lot into books."
+  # if (dramas <= 3 && comedies <= 3 && documentaries <= 3)
+  #   puts "documentaries = #{documentaries}"
+  #   puts "documentaries = #{dramas}"
+  #   puts "documentaries = #{comedies}"
+  #   puts "h is #{h}"
+  #   if h == 0
+  #     puts "You should watch \"#{documentary}\"."
+  #   elsif h == 1
+  #     puts "You should watch \"#{drama}\"."
+  #   elsif h == 2
+  #     puts "You should watch \"#{comedy}\"."
+  #   end
 end
 end
 
